@@ -10,27 +10,18 @@
 
 <nav class="navbar navbar-expand-lg" class:bg-secondary-subtle={!dark} class:bg-dark={dark} class:text={dark}>
     <div class="container-fluid">
-      <span class="navbar-brand">Navbar</span>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/weekly">Weekly</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/progress">Progress</a>
+            <a class="nav-link active" aria-current="page" href="/weekly">Questions</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/leaderboard">Leaderboard</a>
           </li>
         </ul>
-        <button on:click={()=>{window.document.body.classList.toggle('dark-mode');dark=!dark;console.log(obj)}} class="dmode">
+        <button on:click={()=>{window.document.body.classList.toggle('dark-mode');dark=!dark;}} class="dmode">
             <img src="dark-mode.png" height="25px" width="25px" alt="mode" class="d-flex" />
             </button>
       </div>
-    </div>
   </nav>
 
 
@@ -40,7 +31,8 @@
   <Collapse id={i} obj={j} index={index+1}></Collapse>
 {/each}
 {:else}
-<div> Waiting...</div>
+<!-- svelte-ignore a11y-missing-attribute -->
+<div class="loading"><iframe src="https://giphy.com/embed/3oEjI6SIIHBdRxXI40" width="30%" height="50%"></iframe></div>
 {/if}
 {/key}
 
@@ -61,7 +53,12 @@
 
 
 <style>
-
+  :global(body){
+    box-sizing: border-box;
+  }
+  .loading{
+    text-align: center;
+  }
     .dmode{
         background: none;
         color: inherit;

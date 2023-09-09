@@ -4,10 +4,11 @@
     export let obj;
 </script>
 
-<div class="card">
+<div class="card container-fluid" data-bs-toggle="collapse" data-bs-target="#collapseExample{id}">
 <p class="d-inline-flex gap-1">
-    <button class="btn btn-primary d-flex" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample{id}" aria-expanded="false" aria-controls="collapseExample">
-      Week - {index} 
+    <span style="padding-top: 15px"> Week - {index}  </span>
+    <button class="dmode" style="padding-top: 15px" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample{id}" aria-expanded="false" aria-controls="collapseExample">
+      +
     </button>
   </p>
   <div class="collapse" id="collapseExample{id}">
@@ -29,5 +30,15 @@
 
 
 <style>
-
+.dmode{
+        margin-left: 10px;
+        padding-left: 10px;
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+    }
 </style>
