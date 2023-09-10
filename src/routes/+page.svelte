@@ -39,7 +39,7 @@
       </div>
   </nav>
 
-{#key data}
+
 {#if set}
 {#each Object.entries(data) as [i,j],index}
   <Collapse id={i} obj={j} index={index+1}></Collapse>
@@ -48,7 +48,6 @@
 <!-- svelte-ignore a11y-missing-attribute -->
 <div class="loading"><iframe src="https://giphy.com/embed/3oEjI6SIIHBdRxXI40" width="30%" height="50%"></iframe></div>
 {/if}
-{/key}
 
 
 

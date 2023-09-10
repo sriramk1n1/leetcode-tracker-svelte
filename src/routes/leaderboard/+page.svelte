@@ -71,7 +71,7 @@ window.onclick = function(event) {
 {#key data}
 {#if set}
 {#each Object.entries(data) as [i,j],index}
-  <Collapse id={i} obj={j} index={index+1}></Collapse>
+  <Collapse obj={j}></Collapse>
 {/each}
 {:else}
 <!-- svelte-ignore a11y-missing-attribute -->

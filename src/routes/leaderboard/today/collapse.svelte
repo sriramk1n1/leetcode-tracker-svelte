@@ -1,7 +1,5 @@
 <script>
     import {dark} from "$lib/store.js";
-    export let id = "id";
-    export let index;
     export let obj;
 </script>
 
