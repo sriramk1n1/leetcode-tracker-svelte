@@ -1,29 +1,28 @@
 <script>
-    import { onMount } from "svelte";
     import Collapse from "./collapse.svelte";
-    let dark=false;
+    import {dark} from "$lib/store.js";
+    import img from "$lib/dark-mode.png"
+
     let data;
     let set=false;
-    fetch("http://3.110.130.68:8000/api/weekly").then(response=>response.json()).then(obj=>{data=obj;set=true;});
-
+    fetch("http://127.0.0.1:8000/api/weekly").then(response=>response.json()).then(obj=>{data=obj;set=true;});
 </script>
 
-<nav class="navbar navbar-expand-lg" class:bg-secondary-subtle={!dark} class:bg-dark={dark} class:text={dark}>
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg" class:bg-secondary-subtle={!$dark} class:navbar-dark={$dark} class:bg-dark={$dark}>
+    <div class="container-fluid dark-mode">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/weekly">Questions</a>
+            <a class="nav-link active" aria-current="page" href="/">Questions</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/leaderboard">Leaderboard</a>
           </li>
         </ul>
-        <button on:click={()=>{window.document.body.classList.toggle('dark-mode');dark=!dark;}} class="dmode">
-            <img src="dark-mode.png" height="25px" width="25px" alt="mode" class="d-flex" />
+        <button on:click={()=>{window.document.body.classList.toggle('dark-mode');$dark=!$dark;}} class="dmode">
+            <img src={img} height="25px" width="25px" alt="mode" class="d-flex" />
             </button>
       </div>
   </nav>
-
 
 {#key data}
 {#if set}
@@ -72,4 +71,5 @@
         background-color: #1c1c1c;
         color: white;
     }
+    
 </style>

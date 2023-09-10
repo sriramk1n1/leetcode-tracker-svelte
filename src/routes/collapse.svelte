@@ -1,10 +1,11 @@
 <script>
+    import {dark} from "$lib/store.js";
     export let id = "id";
     export let index;
     export let obj;
 </script>
 
-<div class="card container-fluid" data-bs-toggle="collapse" data-bs-target="#collapseExample{id}">
+<div class="card container-fluid" data-bs-toggle="collapse" data-bs-target="#collapseExample{id}" class:bg-dark={$dark} class:text-white={$dark}>
 <p class="d-inline-flex gap-1">
     <span style="padding-top: 15px"> Week - {index}  </span>
     <button class="dmode" style="padding-top: 15px" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample{id}" aria-expanded="false" aria-controls="collapseExample">
