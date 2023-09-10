@@ -2,10 +2,9 @@
     import Collapse from "./collapse.svelte";
     import {dark} from "$lib/store.js";
     import img from "$lib/dark-mode.png"
-
     let data;
     let set=false;
-    fetch("http://127.0.0.1:8000/api/weekly").then(response=>response.json()).then(obj=>{data=obj;set=true;});
+    fetch("https://skapi.online/api/weekly").then(response=>response.json()).then(obj=>{data=obj;set=true;});
 </script>
 
 <nav class="navbar navbar-expand-lg" class:bg-secondary-subtle={!$dark} class:navbar-dark={$dark} class:bg-dark={$dark}>
@@ -18,7 +17,7 @@
             <a class="nav-link" href="/leaderboard">Leaderboard</a>
           </li>
         </ul>
-        <button on:click={()=>{window.document.body.classList.toggle('dark-mode');$dark=!$dark;}} class="dmode">
+        <button on:click={()=>{$dark=!$dark;}} class="dmode">
             <img src={img} height="25px" width="25px" alt="mode" class="d-flex" />
             </button>
       </div>

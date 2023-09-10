@@ -4,7 +4,7 @@
     import img from "$lib/dark-mode.png"
     let data;
     let set=false;
-    fetch("http://127.0.0.1:8000/api/leaderboard-today").then(response=>response.json()).then(obj=>{data=obj;set=true;});
+    fetch("https://skapi.online/api/leaderboard-today").then(response=>response.json()).then(obj=>{data=obj;set=true;});
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
