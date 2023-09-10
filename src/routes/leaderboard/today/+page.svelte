@@ -2,9 +2,17 @@
     import Collapse from "./collapse.svelte";
     import {dark} from "$lib/store.js";
     import img from "$lib/dark-mode.png"
+    import { onMount } from "svelte";
+    
     let data;
     let set=false;
-    fetch("https://skapi.online/api/leaderboard-today").then(response=>response.json()).then(obj=>{data=obj;set=true;});
+    onMount(()=>{
+      if (localStorage.dark==="true"){
+        $dark=true;
+        window.document.body.classList.add('dark-mode')
+      }
+      fetch("https://skapi.online/api/leaderboard-today").then(response=>response.json()).then(obj=>{data=obj;set=true;});
+    })
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
@@ -45,7 +53,15 @@ window.onclick = function(event) {
             </div>
           </li>
         </ul>
-        <button on:click={()=>{window.document.body.classList.toggle('dark-mode');$dark=!$dark;}} class="dmode">
+        <button on:click={()=>{
+          $dark=!$dark;
+          if ($dark==true){
+            window.document.body.classList.add('dark-mode')
+          }else{
+            window.document.body.classList.remove('dark-mode')
+          }
+          window.localStorage.dark=$dark?"true":"false";
+          }} class="dmode">
             <img src={img} height="25px" width="25px" alt="mode" class="d-flex" />
             </button>
       </div>
