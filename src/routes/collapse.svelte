@@ -3,10 +3,9 @@
     export let id;
     export let index;
     export let obj;
-    $: console.log(obj)
 </script>
 
-<div class="card container-fluid" data-bs-toggle="collapse" data-bs-target="#collapseExample{id}" class:bg-dark={$dark} class:text-white={$dark}>
+<div class="card container-fluid" class:bg-dark={$dark} class:text-white={$dark}>
 <p class="d-inline-flex gap-1">
     <span style="padding-top: 15px"> Week - {index}  </span>
     <button class="dmode" style="padding-top: 15px" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample{id}" aria-expanded="false" aria-controls="collapseExample">
@@ -18,7 +17,7 @@
       <div> Topic: {obj.topic}</div>
       <ul>
         {#if obj.d1}
-        <li>{obj.d1} -- Q1 : <a href={obj.q1}>{obj.q1}</a></li>
+        <li>{obj.d1} -- Q1 : <a href={obj.q1}>{obj.q1} </a></li>
         {/if}
         {#if obj.d2}
         <li>{obj.d2} -- Q@ : <a href={obj.q2}>{obj.q2}</a></li>
@@ -36,7 +35,7 @@
     </div>
     <div class="card-body">
       {#if obj.r1}
-          References:
+          References/Additional Questions:
       {/if}
       <ul>
         
@@ -65,11 +64,14 @@
 
 <style>
 .dmode{
+        display: flex;
         margin-left: 10px;
         padding-left: 10px;
         background: none;
         color: inherit;
         border: none;
+        max-width: 100%;
+        width: 92%;
         padding: 0;
         font: inherit;
         cursor: pointer;
