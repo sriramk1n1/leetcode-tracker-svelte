@@ -17,19 +17,19 @@
       <div> Topic: {obj.topic}</div>
       <ul>
         {#if obj.d1}
-        <li>{obj.d1} -- Q1 : <a href={obj.q1}>{obj.q1} </a></li>
+        <li>{obj.d1} -- Q1 : <a target="_blank" rel="noopener noreferrer" href={obj.q1}>{obj.q1} </a></li>
         {/if}
         {#if obj.d2}
-        <li>{obj.d2} -- Q@ : <a href={obj.q2}>{obj.q2}</a></li>
+        <li>{obj.d2} -- Q@ : <a target="_blank" rel="noopener noreferrer" href={obj.q2}>{obj.q2}</a></li>
         {/if}
         {#if obj.d3}
-        <li>{obj.d3} -- Q1 : <a href={obj.q3}>{obj.q3}</a></li>
+        <li>{obj.d3} -- Q1 : <a target="_blank" rel="noopener noreferrer" href={obj.q3}>{obj.q3}</a></li>
         {/if}
         {#if obj.d4}
-        <li>{obj.d4} -- Q1 : <a href={obj.q4}>{obj.q4}</a></li>
+        <li>{obj.d4} -- Q1 : <a target="_blank" rel="noopener noreferrer" href={obj.q4}>{obj.q4}</a></li>
         {/if}
         {#if obj.d5}
-        <li>{obj.d5} -- Q1 : <a href={obj.q5}>{obj.q5}</a></li>
+        <li>{obj.d5} -- Q1 : <a target="_blank" rel="noopener noreferrer" href={obj.q5}>{obj.q5}</a></li>
         {/if}
       </ul>
     </div>
@@ -40,19 +40,19 @@
       <ul>
         
         {#if obj.r1}
-        <li><a href={obj.r1}>{obj.r1}</a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href={obj.r1}>{obj.r1}</a></li>
         {/if}
         {#if obj.r2}
-      <li><a href={obj.r2}>{obj.r2}</a></li>
+      <li><a target="_blank" rel="noopener noreferrer" href={obj.r2}>{obj.r2}</a></li>
       {/if}
       {#if obj.r3}
-      <li><a href={obj.r3}>{obj.r3}</a></li>
+      <li><a target="_blank" rel="noopener noreferrer" href={obj.r3}>{obj.r3}</a></li>
       {/if}
       {#if obj.r4}
-      <li><a href={obj.r4}>{obj.r4}</a></li>
+      <li><a target="_blank" rel="noopener noreferrer" href={obj.r4}>{obj.r4}</a></li>
       {/if}
       {#if obj.r5}
-      <li><a href={obj.r5}>{obj.r5}</a></li>
+      <li><a target="_blank" rel="noopener noreferrer" href={obj.r5}>{obj.r5}</a></li>
       {/if}
     </ul>
   </div>
