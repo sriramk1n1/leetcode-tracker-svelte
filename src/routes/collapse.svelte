@@ -71,7 +71,7 @@
         color: inherit;
         border: none;
         max-width: 100%;
-        width: 92%;
+        width: 75%;
         padding: 0;
         font: inherit;
         cursor: pointer;
