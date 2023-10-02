@@ -22,7 +22,7 @@
             <a class="nav-link active" aria-current="page" href="/">Questions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/leaderboard">Leaderboard</a>
+            <a class="nav-link" href="/leaderboard">Leaderboard - Leetcode</a>
           </li>
         </ul>
         <button on:click={()=>{
