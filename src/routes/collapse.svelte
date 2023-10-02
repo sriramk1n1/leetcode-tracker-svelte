@@ -3,6 +3,7 @@
     export let id;
     export let index;
     export let obj;
+    $: console.log(obj)
 </script>
 
 <div class="card container-fluid" data-bs-toggle="collapse" data-bs-target="#collapseExample{id}" class:bg-dark={$dark} class:text-white={$dark}>
@@ -16,14 +17,46 @@
     <div class="card-body">
       <div> Topic: {obj.topic}</div>
       <ul>
-        <li>Q1 : <a href={obj.q1}>{obj.q1}</a></li>
-        <li>Q2 : <a href={obj.q2}>{obj.q2}</a></li>
-        <li>Q3 : <a href={obj.q3}>{obj.q3}</a></li>
-        <li>Q4 : <a href={obj.q4}>{obj.q4}</a></li>
-        <li>Q5 : <a href={obj.q5}>{obj.q5}</a></li>
-
+        {#if obj.d1}
+        <li>{obj.d1} -- Q1 : <a href={obj.q1}>{obj.q1}</a></li>
+        {/if}
+        {#if obj.d2}
+        <li>{obj.d2} -- Q@ : <a href={obj.q2}>{obj.q2}</a></li>
+        {/if}
+        {#if obj.d3}
+        <li>{obj.d3} -- Q1 : <a href={obj.q3}>{obj.q3}</a></li>
+        {/if}
+        {#if obj.d4}
+        <li>{obj.d4} -- Q1 : <a href={obj.q4}>{obj.q4}</a></li>
+        {/if}
+        {#if obj.d5}
+        <li>{obj.d5} -- Q1 : <a href={obj.q5}>{obj.q5}</a></li>
+        {/if}
       </ul>
     </div>
+    <div class="card-body">
+      {#if obj.r1}
+          References:
+      {/if}
+      <ul>
+        
+        {#if obj.r1}
+        <li><a href={obj.r1}>{obj.r1}</a></li>
+        {/if}
+        {#if obj.r2}
+      <li><a href={obj.r2}>{obj.r2}</a></li>
+      {/if}
+      {#if obj.r3}
+      <li><a href={obj.r3}>{obj.r3}</a></li>
+      {/if}
+      {#if obj.r4}
+      <li><a href={obj.r4}>{obj.r4}</a></li>
+      {/if}
+      {#if obj.r5}
+      <li><a href={obj.r5}>{obj.r5}</a></li>
+      {/if}
+    </ul>
+  </div>
   </div>
 </div>
 
