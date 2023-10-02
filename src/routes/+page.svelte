@@ -11,7 +11,7 @@
         $dark=true;
         window.document.body.classList.add('dark-mode')
       }
-      fetch("https://skapi.online/api/weekly").then(response=>response.json()).then(obj=>{data=obj;set=true;});
+      fetch("https://api/api/weekly").then(response=>response.json()).then(obj=>{data=obj;set=true;});
     })
 </script>
 
