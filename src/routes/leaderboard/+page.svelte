@@ -48,8 +48,8 @@ window.onclick = function(event) {
               <button on:click={myFunction} class="dropbtn nav-link"> Sort By</button>
               <div id="myDropdown" class="dropdown-content">
                 <a href="/leaderboard">Total Solved</a>
-                <a href="/leaderboard/today">Solved Today (updates every hour)</a>
-                <a href="/leaderboard/week">Solved this week (updates daily)</a>
+                <a href="/leaderboard/today">Solved Today </a>
+                <a href="/leaderboard/week">Solved this week </a>
               </div>
             </div>
           </li>
