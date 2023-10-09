@@ -20,16 +20,16 @@
         <li>{obj.d1} -- Q1 : <a target="_blank" rel="noopener noreferrer" href={obj.q1}>{obj.q1} </a></li>
         {/if}
         {#if obj.d2}
-        <li>{obj.d2} -- Q@ : <a target="_blank" rel="noopener noreferrer" href={obj.q2}>{obj.q2}</a></li>
+        <li>{obj.d2} -- Q2 : <a target="_blank" rel="noopener noreferrer" href={obj.q2}>{obj.q2}</a></li>
         {/if}
         {#if obj.d3}
-        <li>{obj.d3} -- Q1 : <a target="_blank" rel="noopener noreferrer" href={obj.q3}>{obj.q3}</a></li>
+        <li>{obj.d3} -- Q3 : <a target="_blank" rel="noopener noreferrer" href={obj.q3}>{obj.q3}</a></li>
         {/if}
         {#if obj.d4}
-        <li>{obj.d4} -- Q1 : <a target="_blank" rel="noopener noreferrer" href={obj.q4}>{obj.q4}</a></li>
+        <li>{obj.d4} -- Q4 : <a target="_blank" rel="noopener noreferrer" href={obj.q4}>{obj.q4}</a></li>
         {/if}
         {#if obj.d5}
-        <li>{obj.d5} -- Q1 : <a target="_blank" rel="noopener noreferrer" href={obj.q5}>{obj.q5}</a></li>
+        <li>{obj.d5} -- Q5 : <a target="_blank" rel="noopener noreferrer" href={obj.q5}>{obj.q5}</a></li>
         {/if}
       </ul>
     </div>
