@@ -11,7 +11,7 @@
         $dark=true;
         window.document.body.classList.add('dark-mode')
       }
-      fetch("https://chat.skapi.online/api/leaderboard-all").then(response=>response.json()).then(obj=>{data=obj;set=true;});
+      fetch("https://chat.skapi.online/api/leaderboard-today").then(response=>response.json()).then(obj=>{data=obj;set=true;});
     })
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
@@ -42,16 +42,6 @@ window.onclick = function(event) {
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="/leaderboard">Leaderboard</a>
-          </li>
-          <li class="nav-item">
-            <div class="dropdown">
-              <button on:click={myFunction} class="dropbtn nav-link"> Sort By</button>
-              <div id="myDropdown" class="dropdown-content">
-                <a href="/leaderboard">Total Solved</a>
-                <a href="/leaderboard/today">Solved Today </a>
-                <a href="/leaderboard/week">Solved this week </a>
-              </div>
-            </div>
           </li>
         </ul>
         <button on:click={()=>{
