@@ -9,7 +9,6 @@
             <!-- <li class="list">Name: {obj.name}</li> -->
             <li class="list">User name: {obj.user_name}</li>
             <li class="list">Total Solved: {obj.total}</li>
-            <li class="list">This week: {obj.week}</li>
             <li class="list">Today: {obj.today}</li>
         </ul>
     </div>
