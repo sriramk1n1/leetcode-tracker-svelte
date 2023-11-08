@@ -7,14 +7,13 @@
 
 <div class="card container-fluid" class:bg-dark={$dark} class:text-white={$dark}>
 <p class="d-inline-flex gap-1">
-    <span style="padding-top: 15px"> Week - {index}  </span>
+    <span style="padding-top: 15px"> Week #{index} : {obj.topic} </span>
     <button class="dmode" style="padding-top: 15px" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample{id}" aria-expanded="false" aria-controls="collapseExample">
       +
     </button>
   </p>
   <div class="collapse" id="collapseExample{id}">
     <div class="card-body">
-      <div> Topic: {obj.topic}</div>
       <ul>
         {#if obj.d1}
         <li>{obj.d1} -- Q1 : <a target="_blank" rel="noopener noreferrer" href={obj.q1}>{obj.q1} </a></li>
