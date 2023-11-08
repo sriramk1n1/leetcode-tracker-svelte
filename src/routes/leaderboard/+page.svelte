@@ -11,7 +11,7 @@
         $dark=true;
         window.document.body.classList.add('dark-mode')
       }
-      fetch("https://chat.skapi.online/api/leaderboard-all").then(response=>response.json()).then(obj=>{data=obj;set=true;});
+      fetch("https://gdsc.skapi.online/api/leaderboard-all").then(response=>response.json()).then(obj=>{data=obj;set=true;});
     })
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
